@@ -1,0 +1,128 @@
+<!-- Desktop Header -->
+<header class="hidden md:block sticky top-0 z-50 w-full bg-[#FCFBF9] ">
+  <div class=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="h-[89px] flex items-center justify-between h-16">
+<div class="flex items-center gap-[15px]">
+      <!-- Logo -->
+      <a routerLink="/" class="flex items-center gap-2 flex-shrink-0">
+        <img src="images/logo.png" alt="Jobcart" class="w-[185px] h-[32px]" />
+      </a>
+
+      <!-- Navigation -->
+      <nav class="flex items-center gap-8">
+        <a *ngFor="let item of navItems"
+           [routerLink]="item.href"
+           class="font-hanken-grotesk font-medium text-base leading-6 tracking-tight text-[#0f172a] align-middle hover:text-[#06707D]">
+          {{ item.label }}
+        </a>
+      </nav>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-5">
+        <button class="w-[90px] h-[41px] font-medium text-[16px] leading-[25.6px] text-[#2D3648] rounded-[8px]">
+          Log In
+        </button>
+        <button class="w-[90px] h-[41px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] bg-[rgba(6,112,125,1)] font-hanken-grotesk  text-[16px] leading-[24px] text-center text-white">
+          Sign up
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Header -->
+<header style="transform-style: preserve-3d;" class="md:hidden sticky top-0 z-50 w-full bg-[#FCFBF9] border-b border-gray-200">
+  <div class="px-4 py-3 flex items-center justify-between">
+    <a routerLink="/" class="flex items-center gap-2">
+      <img src="images/logo.png" alt="Jobcart" class="w-[185px] h-[32px]" />
+    </a>
+
+    <button (click)="openMenu()" class="py-2 rounded-lg text-[#06707D] hover:bg-gray-100">
+      <lucide-icon [img]="icons.Menu" class="w-10 h-10"></lucide-icon>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div 
+[ngClass]="mobileMenuOpen ? 'h-[600px]' : 'h-0'"
+     class=" fixed top-0 left-0 right-0  w-full bg-gradient-to-r from-[#083A40] to-[#06707D] z-50 md:hidden overflow-y-auto transition-all duration-1000 ease-in-out">
+
+  <!-- Drawer Header -->
+  <div class="flex items-center justify-between p-4 border-b border-slate-700 bg-[#FCFBF9]">
+    <span class="text-white font-semibold flex items-center gap-2">
+      <img src="images/logo.png" class="w-[185px] h-[32px]" />
+      <!-- Jobcart -->
+    </span>
+
+    <button (click)="closeMenu()" class="p-1 text-[#06707D] hover:bg-slate-700 rounded-lg">
+      <lucide-icon [img]="icons.X" class="w-10 h-10"></lucide-icon>
+    </button>
+  </div>
+
+  <!-- Main Menu -->
+  <nav *ngIf="!showBusinessSubmenu" class="p-4 space-y-2 bg-gradient-to-r from-[#083A40] to-[#06707D]">
+
+    <div *ngFor="let item of navItems">
+      <button *ngIf="item.label === 'Business'"
+              (click)="showBusinessSubmenu = true"
+              class="w-full flex justify-between items-center pt-[22px] pb-[22px] text-white border-b border-[#E6E9F5]/20 text-[24px] font-semibold leading-[150%]">
+        {{ item.label }}
+        <lucide-icon [img]="icons.ChevronRight" class="w-5 h-5"></lucide-icon>
+      </button>
+
+      <a *ngIf="item.label !== 'Business'"
+         [routerLink]="item.href"
+         (click)="closeMenu()"
+         class="flex justify-between items-center pt-[22px] pb-[22px] text-white border-b border-[#E6E9F5]/20 text-[24px] font-semibold leading-[150%]">
+        {{ item.label }}
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- Business Submenu -->
+  <div *ngIf="showBusinessSubmenu">
+
+    <div class="flex items-center gap-4 px-4 py-3 border-b border-slate-700">
+      <button (click)="showBusinessSubmenu = false" class="text-white">
+        <lucide-icon [img]="icons.ChevronRight" class="w-5 h-5 rotate-180"></lucide-icon>
+      </button>
+      <h2 class="text-white font-semibold text-lg">Business</h2>
+    </div>
+
+    <div class="p-4 space-y-4">
+      <div *ngFor="let item of businessSubmenuItems"
+           class="px-4 py-3 hover:bg-slate-700 rounded-lg flex gap-3">
+
+        <lucide-icon [img]="item.icon" class="w-5 h-5 text-teal-400 mt-1"></lucide-icon>
+
+        <div>
+          <h3 class="text-white text-sm font-medium">
+            {{ item.title }}
+          </h3>
+          <p class="text-gray-400 text-xs mt-1">
+            {{ item.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Actions -->
+  <div *ngIf="!showBusinessSubmenu"
+       class="p-4 space-y-4 pb-8 mt-4">
+
+    <button class="w-full h-[50px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] border border-[#FCFBF9] font-hanken-grotesk  text-[18px] leading-[24px] text-center text-[#FCFBF9] font-medium">
+      Log In
+    </button>
+
+    <button class="w-full h-[50px] opacity-100 pt-[8.5px] pr-[18px] pb-[8.5px] pl-[18px] rounded-[8px] border border-[#FCFBF9] font-hanken-grotesk  text-[18px] leading-[24px] text-center text-[#FCFBF9] font-medium">
+      Sign up
+    </button>
+  </div>
+
+</div>

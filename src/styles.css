@@ -1,0 +1,62 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+body {
+  font-family: 'Hanken Grotesk', Georgia, serif;
+  background-color: #FCFBF9;
+}
+
+
+button, a {
+    cursor: pointer;
+}
+
+button:hover {
+      color: #06707D;
+    background-color: #fff;
+    border-color: #06707D;
+    border: 1px solid;
+}
+
+
+.h2-45 {
+       font-size: 45px;
+        line-height: 50px;
+    }
+
+    .h3-40 {
+       font-size: 40px;
+        line-height: 45px;
+    }
+
+
+
+@media screen and (max-width: 767px) {
+    .h2-45 {
+       font-size: 40px;
+        line-height: 45px;
+    }
+
+     .h3-40 {
+      font-size: 35px;
+        line-height: 40px;
+    }
+
+
+}
+
+@media screen and (max-width: 479px) {
+    .h2-45 {
+                font-size: 35px;
+        line-height: 40px;
+    }
+
+     .h3-40 {
+      font-size: 30px;
+        line-height: 35px;
+    }
+
+
+
+}
