@@ -1,49 +1,49 @@
 {
-  "hash": "779a7edd",
-  "configHash": "501c89b4",
+  "hash": "4dd6895f",
+  "configHash": "b90cde13",
   "lockfileHash": "39d425d5",
-  "browserHash": "e9000017",
+  "browserHash": "3715bb24",
   "optimized": {
     "@angular/cdk/bidi": {
       "src": "../../../../../../node_modules/@angular/cdk/fesm2022/bidi.mjs",
       "file": "@angular_cdk_bidi.js",
-      "fileHash": "67a0ade1",
+      "fileHash": "710fb42a",
       "needsInterop": false
     },
     "@angular/common": {
       "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "146037ac",
+      "fileHash": "8c0731f1",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "9290b12a",
+      "fileHash": "c0dfa5a9",
       "needsInterop": false
     },
     "@angular/material/expansion": {
       "src": "../../../../../../node_modules/@angular/material/fesm2022/expansion.mjs",
       "file": "@angular_material_expansion.js",
-      "fileHash": "b04995bf",
+      "fileHash": "84712b2e",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "b55bda3d",
+      "fileHash": "43c537de",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "fa931c5b",
+      "fileHash": "cbfc5121",
       "needsInterop": false
     },
     "lucide-angular": {
       "src": "../../../../../../node_modules/lucide-angular/fesm2020/lucide-angular.mjs",
       "file": "lucide-angular.js",
-      "fileHash": "135b809c",
+      "fileHash": "45d0bddc",
       "needsInterop": false
     }
   },

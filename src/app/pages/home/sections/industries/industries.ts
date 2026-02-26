@@ -1,18 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-industries',
-//   imports: [],
-//   templateUrl: './industries.html',
-//   styleUrl: './industries.css',
-// })
-// export class Industries {
-
-// }
-
-
-
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
