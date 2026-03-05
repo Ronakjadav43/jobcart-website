@@ -66,14 +66,14 @@
   <nav *ngIf="!showBusinessSubmenu" class="p-4 space-y-2 bg-gradient-to-r from-[#083A40] to-[#06707D]">
 
     <div *ngFor="let item of navItems">
-      <button *ngIf="item.label === 'Business'"
+      <!-- <button *ngIf="item.label === 'Business'"
               (click)="showBusinessSubmenu = true"
               class="w-full flex justify-between items-center pt-[22px] pb-[22px] text-white border-b border-[#E6E9F5]/20 text-[24px] font-semibold leading-[150%]">
         {{ item.label }}
         <lucide-icon [img]="icons.ChevronRight" class="w-5 h-5"></lucide-icon>
-      </button>
+      </button> -->
 
-      <a *ngIf="item.label !== 'Business'"
+      <a 
          [routerLink]="item.href"
          (click)="closeMenu()"
          class="flex justify-between items-center pt-[22px] pb-[22px] text-white border-b border-[#E6E9F5]/20 text-[24px] font-semibold leading-[150%]">
@@ -84,7 +84,7 @@
   </nav>
 
   <!-- Business Submenu -->
-  <div *ngIf="showBusinessSubmenu">
+  <!-- <div *ngIf="showBusinessSubmenu">
 
     <div class="flex items-center gap-4 px-4 py-3 border-b border-slate-700">
       <button (click)="showBusinessSubmenu = false" class="text-white">
@@ -110,7 +110,7 @@
       </div>
     </div>
 
-  </div>
+  </div> -->
 
   <!-- Bottom Actions -->
   <div *ngIf="!showBusinessSubmenu"
