@@ -1,0 +1,22 @@
+<div class="group relative cursor-pointer">
+    <!-- Image -->
+    <div class="overflow-hidden">
+        <img [src]="image" class="w-full h-[280px] object-cover transition duration-500 group-hover:scale-110" />
+    </div>
+    <!-- Content Card -->
+    <div
+    class="flex flex-col bg-white relative z-[1] -mt-[59px] left-[23px] w-[calc(100%-23px)] pt-[30px] pr-[25px] pb-[25px] pl-[30px] shadow-xl gap-4">
+        <h3
+            class="font-['Hanken_Grotesk'] font-semibold text-[24px] leading-[28.8px] tracking-[-0.24px] text-[#0F172A] group-hover:text-teal-600 transition">
+           <a href="/blog/{{ slug }}" class="line-clamp-2">
+             {{title}}
+            </a>
+        </h3>
+        <p class="font-['Hanken_Grotesk'] font-medium text-[18px] leading-[27px] tracking-[-0.18px] text-[#0F172A] line-clamp-3">
+            {{description}}
+        </p>
+        <div class="mt-4 text-teal-600 text-sm font-medium">
+            {{date}}
+        </div>
+    </div>
+</div>
