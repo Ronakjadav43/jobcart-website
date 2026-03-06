@@ -1,0 +1,27 @@
+<div class="container">
+
+<h2>Blog</h2>
+
+@for (blog of blogs; track blog.slug) {
+
+<div>
+
+  <img [src]="blog.image" width="200">
+
+  <h3>{{ blog.title }}</h3>
+
+  <p>{{ blog.description }}</p>
+
+  <a href="/blog/{{ blog.slug }}">
+    Read More
+  </a>
+
+  <!-- <a href="['/blog', blog.slug]">
+  Read More
+</a> -->
+
+</div>
+
+}
+
+</div>
