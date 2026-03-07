@@ -1,8 +1,9 @@
 import { Component, Input  } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-blog-card',
-  imports: [],
+  imports: [DatePipe],
   templateUrl: './blog-card.html',
   styleUrl: './blog-card.css',
 })
