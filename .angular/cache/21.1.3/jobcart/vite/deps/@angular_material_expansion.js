@@ -12,14 +12,14 @@ import {
   _StructuralStylesLoader,
   _animationsDisabled,
   hasModifierKey
-} from "./chunk-PUYOJ76P.js";
+} from "./chunk-XEOFGMJZ.js";
 import {
   BidiModule
-} from "./chunk-XIPCAFLC.js";
-import "./chunk-JISB5ECC.js";
-import "./chunk-RS2LHAAI.js";
-import "./chunk-HCTCEJYC.js";
-import "./chunk-LD7HCCIX.js";
+} from "./chunk-FPC6TTRA.js";
+import "./chunk-HGCEHVLA.js";
+import "./chunk-VQIEH4EX.js";
+import "./chunk-DHSOTZ54.js";
+import "./chunk-RA3CJUU2.js";
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -28,6 +28,7 @@ import {
   ContentChildren,
   DOCUMENT,
   Directive,
+  EMPTY,
   ElementRef,
   EventEmitter,
   HostAttributeToken,
@@ -38,15 +39,21 @@ import {
   Output,
   QueryList,
   Renderer2,
+  Subject,
+  Subscription,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
   ViewEncapsulation,
   booleanAttribute,
+  filter,
   inject,
+  merge,
   numberAttribute,
   setClassMetadata,
   signal,
+  startWith,
+  take,
   ɵɵInheritDefinitionFeature,
   ɵɵNgOnChangesFeature,
   ɵɵProvidersFeature,
@@ -76,16 +83,7 @@ import {
   ɵɵstyleProp,
   ɵɵtemplate,
   ɵɵviewQuery
-} from "./chunk-52V6OSH2.js";
-import {
-  EMPTY,
-  Subject,
-  Subscription,
-  filter,
-  merge,
-  startWith,
-  take
-} from "./chunk-PJVWDKLX.js";
+} from "./chunk-MM6NZWVC.js";
 
 // node_modules/@angular/cdk/fesm2022/accordion.mjs
 var CDK_ACCORDION = new InjectionToken("CdkAccordion");

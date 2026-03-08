@@ -24,14 +24,9 @@
       </app-blog-card> -->
 
 
-       <app-blog-card
-    *ngFor="let blog of pagedBlogs"
-    [title]="blog.blogTitle"
-    [description]="blog.blogSummary"
-    [image]="blog.blogImgFullPath"
-    [date]="blog.createdDt"
-    [slug]="blog.blogUrl">
-  </app-blog-card>
+      <app-blog-card *ngFor="let blog of pagedBlogs" [title]="blog.blogTitle" [description]="blog.blogSummary"
+        [image]="blog.blogImgFullPath" [date]="blog.createdDt" [slug]="blog.blogUrl">
+      </app-blog-card>
 
 
 
@@ -49,13 +44,10 @@
     </div> -->
 
     <div class="mt-10 flex justify-center">
-  <mat-paginator
-    [length]="blogs.length"
-    [pageSize]="pageSize"
-    [pageSizeOptions]="[6,9,12]"
-    (page)="onPageChange($event)">
-  </mat-paginator>
-</div>
+      <mat-paginator [length]="blogs.length" [pageSize]="pageSize" [pageSizeOptions]="[6,9,12]"
+        (page)="onPageChange($event)">
+      </mat-paginator>
+    </div>
 
   </div>
 </section>

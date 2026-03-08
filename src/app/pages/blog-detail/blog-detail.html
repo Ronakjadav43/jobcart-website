@@ -1,7 +1,38 @@
-<div class="container">
+<section class="from-slate-50 to-white py-6 sm:py-8 lg:py-12 px-2 sm:px-6 lg:px-8" *ngIf="!loading && blogData">
+  <div class="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8">
 
-<h2>Blog Detail</h2>
+    <!-- Header -->
+    <div class="mb-8">
+      <h1 class="font-['Hanken_Grotesk'] font-bold text-3xl md:text-5xl text-[#0F172A] mb-4">
+        {{ blogData.blogTitle }}
+      </h1>
+      <div class="flex items-center gap-4 text-gray-500 mb-6">
+        <span>{{ blogData.createdDt | date:'longDate' }}</span>
+      </div>
 
-<p>Blog Slug : {{slug}}  123</p>
+      <!-- Image -->
+      <img [src]="blogData.blogImgFullPath" [alt]="blogData.blogTitle"
+        class="w-full h-auto max-h-[500px] object-cover rounded-xl shadow-md mb-8">
+    </div>
 
+    <!-- Content rendering raw HTML -->
+    <div class="prose prose-lg max-w-none text-gray-700 font-['Hanken_Grotesk']" [innerHTML]="blogData.blogDescp">
+    </div>
+
+  </div>
+</section>
+
+<!-- Loading State -->
+<div class="flex justify-center items-center min-h-[50vh]" *ngIf="loading">
+  <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#06707D]"></div>
+</div>
+
+<!-- Not Found State -->
+<div class="flex flex-col items-center justify-center py-20 min-h-[50vh]" *ngIf="!loading && !blogData">
+  <h2 class="text-3xl font-bold text-[#0F172A] mb-4">Blog post not found</h2>
+  <p class="text-gray-500 mb-6">The article you're looking for doesn't exist or has been removed.</p>
+  <a routerLink="/blog"
+    class="px-6 py-3 bg-[#06707D] text-white rounded-lg font-semibold hover:bg-[#055b66] transition">
+    ← Back to Blogs
+  </a>
 </div>
