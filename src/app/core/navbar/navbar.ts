@@ -25,9 +25,9 @@ export class Navbar {
   };
 
   navItems = [
-    { label: 'How It Works', href: '#' },
+    // { label: 'How It Works', href: '#' },
     { label: 'Business', href: '/business' },
-     { label: 'Worker', href: '/worker' },
+    { label: 'Worker', href: '/worker' },
   ];
 
   businessSubmenuItems = [

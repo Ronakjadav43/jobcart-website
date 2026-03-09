@@ -27,6 +27,7 @@ export class BlogDetail implements OnInit {
       this.fetchBlogDetail();
     } else {
       this.loading = false;
+      this.cdr.detectChanges();
     }
   }
 
