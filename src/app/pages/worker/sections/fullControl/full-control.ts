@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './full-control.html',
   styleUrl: './full-control.css',
 })
-export class fullControl {
-
-}
+export class fullControl {}

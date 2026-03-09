@@ -14,16 +14,18 @@ interface Solution {
   styleUrl: './solutions.css',
 })
 export class Solutions {
-solutions: Solution[] = [
+  solutions: Solution[] = [
     {
       image: 'assets/images/Short-term temporary workers.png',
       title: 'Short-term temporary workers',
-      description: 'For one-off events and seasonal demand spikes. AI optimization for immediate productivity.',
+      description:
+        'For one-off events and seasonal demand spikes. AI optimization for immediate productivity.',
     },
     {
-       image: 'assets/images/Long-term temporary workers.png',
+      image: 'assets/images/Long-term temporary workers.png',
       title: 'Long-term temporary workers',
-      description: 'For longer-term and project-based work. AI matching for consistent reliability.',
+      description:
+        'For longer-term and project-based work. AI matching for consistent reliability.',
     },
     {
       image: 'assets/images/Hire permanent workers to join your team.png',
@@ -32,6 +34,3 @@ solutions: Solution[] = [
     },
   ];
 }
-
-
-

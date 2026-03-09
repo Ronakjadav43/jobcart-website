@@ -8,9 +8,8 @@ describe('CookiePolicy', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CookiePolicy]
-    })
-    .compileComponents();
+      imports: [CookiePolicy],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(CookiePolicy);
     component = fixture.componentInstance;

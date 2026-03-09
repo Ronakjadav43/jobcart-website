@@ -8,9 +8,8 @@ describe('TrustedLogos', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TrustedLogos]
-    })
-    .compileComponents();
+      imports: [TrustedLogos],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TrustedLogos);
     component = fixture.componentInstance;

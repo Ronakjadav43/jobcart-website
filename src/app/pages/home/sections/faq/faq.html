@@ -1,24 +1,25 @@
 <section class="from-slate-50 to-white py-6 sm:py-8 lg:py-12 px-2 sm:px-6 lg:px-8">
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-
     <!-- Title -->
     <!-- <h2 class="mb-8 sm:mb-10 md:mb-12 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight"> -->
-    <h2 class="mb-12 font-['Hanken_Grotesk'] font-bold text-3xl  md:text-3xl lg:text-4xl  xl:text-5xl  2xl:text-6xl  text-[#0F172A]">
+    <h2
+      class="mb-12 font-['Hanken_Grotesk'] font-bold text-3xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-[#0F172A]"
+    >
       Frequently asked questions
     </h2>
 
     <!-- Accordion -->
-    <mat-accordion multi="false" class="divide-y divide-gray-200 ">
-
-      <mat-expansion-panel *ngFor="let item of faqItems"
-        class="!bg-[#FCFBF9] min-h-[75px] py-[30px] border-b-2 border-b-[rgba(71,85,105,0.2)] !shadow-none !rounded-none">
-
-        <mat-expansion-panel-header  class="!h-[75px] !px-2 !py-0  transition-colors !items-start">
-
-          <mat-panel-title class="font-['Hanken_Grotesk'] font-medium text-xl md:text-2xl lg:text-3xl text-[#0F172A]">
+    <mat-accordion multi="false" class="divide-y divide-gray-200">
+      <mat-expansion-panel
+        *ngFor="let item of faqItems"
+        class="!bg-[#FCFBF9] min-h-[75px] py-[30px] border-b-2 border-b-[rgba(71,85,105,0.2)] !shadow-none !rounded-none"
+      >
+        <mat-expansion-panel-header class="!h-[75px] !px-2 !py-0 transition-colors !items-start">
+          <mat-panel-title
+            class="font-['Hanken_Grotesk'] font-medium text-xl md:text-2xl lg:text-3xl text-[#0F172A]"
+          >
             {{ item.question }}
           </mat-panel-title>
-
         </mat-expansion-panel-header>
 
         <!-- Answer -->
@@ -26,33 +27,28 @@
           <!-- <p class="text-xl md:text-2xl lg:text-3xl text-gray-600 leading-relaxed">
             {{ item.answer }}
           </p> -->
-           <ul class="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
-      
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-2 w-2 rounded-full bg-black"></span>
-        <p>
-          <span class="font-semibold text-black">For businesses:</span>
-          You only pay an all-inclusive hourly rate when a shift is booked.
-          This covers the worker’s pay, insurance, and background checks,
-          with no hidden fees or subscriptions.
-        </p>
-      </li>
+          <ul class="space-y-6 text-gray-700 text-base md:text-lg leading-relaxed">
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2 w-2 rounded-full bg-black"></span>
+              <p>
+                <span class="font-semibold text-black">For businesses:</span>
+                You only pay an all-inclusive hourly rate when a shift is booked. This covers the
+                worker’s pay, insurance, and background checks, with no hidden fees or
+                subscriptions.
+              </p>
+            </li>
 
-      <li class="flex items-start gap-3">
-        <span class="mt-2 h-2 w-2 rounded-full bg-black"></span>
-        <p>
-          <span class="font-semibold text-black">For workers:</span>
-          jobcart is free to use. You earn the hourly rate shown for each shift,
-          and payment details are always visible before you book.
-        </p>
-      </li>
-
-    </ul>
+            <li class="flex items-start gap-3">
+              <span class="mt-2 h-2 w-2 rounded-full bg-black"></span>
+              <p>
+                <span class="font-semibold text-black">For workers:</span>
+                jobcart is free to use. You earn the hourly rate shown for each shift, and payment
+                details are always visible before you book.
+              </p>
+            </li>
+          </ul>
         </div>
-
       </mat-expansion-panel>
-
     </mat-accordion>
-
   </div>
 </section>

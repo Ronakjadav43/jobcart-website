@@ -1,16 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-faq',
-//   imports: [],
-//   templateUrl: './faq.html',
-//   styleUrl: './faq.css',
-// })
-// export class Faq {
-
-// }
-
-
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -26,10 +13,9 @@ interface FaqItem {
   standalone: true,
   imports: [CommonModule, MatExpansionModule],
   templateUrl: './faq.html',
-   styleUrl: './faq.css',
+  styleUrl: './faq.css',
 })
 export class Faq {
-
   faqItems: FaqItem[] = [
     {
       id: 1,
@@ -57,4 +43,3 @@ export class Faq {
     },
   ];
 }
-

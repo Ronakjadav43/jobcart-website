@@ -14,7 +14,6 @@ interface TrustedLogo {
   styleUrls: ['./trusted-logos.css'],
 })
 export class TrustedLogos {
-
   trustedlogos: TrustedLogo[] = [
     { id: '1', image: 'assets/images/trustedLogos/t1.png' },
     { id: '2', image: 'assets/images/trustedLogos/t2.png' },

@@ -3,26 +3,32 @@
     <!-- Header -->
     <div class="mb-12 flex flex-col gap-[20px]">
       <h2 class="font-['Hanken_Grotesk'] font-semibold h2-45 tracking-[-0.9px] text-[#0F172A]">
-        The <span
-          class="font-serif font-normal italic h2-45 tracking-[-0.9px] text-[#06707D]">smarter
-          choice</span> for staffing
+        The
+        <span class="font-serif font-normal italic h2-45 tracking-[-0.9px] text-[#06707D]"
+          >smarter choice</span
+        >
+        for staffing
       </h2>
       <p class="font-['Hanken_Grotesk'] font-medium text-lg lg:text-xl text-[#0F172A]">
-        Compare traditional staffing agencies—full of phone calls, paperwork, and waiting—to Jobcart's AI-powered
-        approach that connects you with reliable workers, quickly.
+        Compare traditional staffing agencies—full of phone calls, paperwork, and waiting—to
+        Jobcart's AI-powered approach that connects you with reliable workers, quickly.
       </p>
     </div>
     <!-- Comparison Table - Desktop -->
-    <div class=" md:block overflow-hidden rounded-3xl shadow-xl mobile-view ">
+    <div class="md:block overflow-hidden rounded-3xl shadow-xl mobile-view">
       <div class="overflow-x-auto">
         <table class="w-full text-white">
           <!-- Table Header -->
           <thead>
             <tr>
-              <th class="pl-4 pr-1 p-4 sm:p-3 md:p-4 lg:p-6 text-left font-semibold text-lg border-b border-[#E6E9F533] w-50/100 md:w-56/100">
+              <th
+                class="pl-4 pr-1 p-4 sm:p-3 md:p-4 lg:p-6 text-left font-semibold text-lg border-b border-[#E6E9F533] w-50/100 md:w-56/100"
+              >
                 <span class="text-sm text-teal-200"></span>
               </th>
-              <th class="p-2 sm:p-3 md:p-4 lg:p-6 text-center font-semibold text-lg border-b border-[#E6E9F533] border-b w-25/100 md:w-22/100">
+              <th
+                class="p-2 sm:p-3 md:p-4 lg:p-6 text-center font-semibold text-lg border-b border-[#E6E9F533] border-b w-25/100 md:w-22/100"
+              >
                 <div class="hidden md:flex items-center justify-center gap-2">
                   <img src="\assets\images\logo-2.png" alt="" />
                 </div>
@@ -30,29 +36,44 @@
                   <img src="\assets\images\logos.png" alt="" class="w-10 sm:w-12 h-auto" />
                 </div>
               </th>
-              <th class="p-2 sm:p-3 md:p-4 lg:p-6 text-center font-semibold text-lg border-b border-[#E6E9F533] border-b w-25/100 md:w-22/100 ">
-                <span class="font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] text-center text-white">
-                  Traditional staffing agencies<sup class="text-sm">1</sup></span>
+              <th
+                class="p-2 sm:p-3 md:p-4 lg:p-6 text-center font-semibold text-lg border-b border-[#E6E9F533] border-b w-25/100 md:w-22/100"
+              >
+                <span
+                  class="font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] text-center text-white"
+                >
+                  Traditional staffing agencies<sup class="text-sm">1</sup></span
+                >
               </th>
             </tr>
           </thead>
           <!-- Table Body -->
           <tbody>
-            <tr *ngFor="let feature of features; let idx = index; trackBy: trackByIndex"
-              [class.border-b]="idx !== features.length - 1" class="border-[#E6E9F5]/20">
+            <tr
+              *ngFor="let feature of features; let idx = index; trackBy: trackByIndex"
+              [class.border-b]="idx !== features.length - 1"
+              class="border-[#E6E9F5]/20"
+            >
               <!-- Feature Name and Description -->
               <td class="pl-4 pr-1 p-4 sm:p-3 md:p-4 lg:p-6 text-left">
-                <h3 class="break-normal font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] text-white">{{ feature.title
-                  }}</h3>
+                <h3
+                  class="break-normal font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[16px] md:text-[18px] leading-[22px] text-white"
+                >
+                  {{ feature.title }}
+                </h3>
 
-                <p *ngIf="feature.description"
-                  class="font-['Hanken_Grotesk'] font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-[16.8px] text-white">
+                <p
+                  *ngIf="feature.description"
+                  class="font-['Hanken_Grotesk'] font-normal text-[12px] sm:text-[14px] md:text-[16px] leading-[16.8px] text-white"
+                >
                   {{ feature.description }}
                 </p>
               </td>
               <td class="p-2 sm:p-3 md:p-4 lg:p-6 text-center border-b border-[#E6E9F5]/20">
                 <ng-container *ngIf="feature.jobcartValue; else showImage">
-                  <div class="font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[18px] md:text-[20px] leading-[22px] text-center text-white">
+                  <div
+                    class="font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[18px] md:text-[20px] leading-[22px] text-center text-white"
+                  >
                     {{ feature.jobcartValue }}
                   </div>
                 </ng-container>
@@ -63,7 +84,9 @@
               </td>
               <td class="p-2 sm:p-3 md:p-4 lg:p-6 text-center border-b border-[#E6E9F5]/20">
                 <ng-container *ngIf="feature.traditionalValue; else showImages">
-                  <div class="font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[18px] md:text-[20px] leading-[22px] text-center text-white">
+                  <div
+                    class="font-['Hanken_Grotesk'] font-semibold text-[14px] sm:text-[18px] md:text-[20px] leading-[22px] text-center text-white"
+                  >
                     {{ feature.traditionalValue }}
                   </div>
                 </ng-container>
@@ -78,8 +101,10 @@
     </div>
     <!-- Comparison Cards - Mobile -->
     <div class="hidden space-y-6">
-      <div *ngFor="let feature of features; let idx = index; trackBy: trackByIndex"
-        class="bg-teal-900 rounded-2xl p-6 text-white">
+      <div
+        *ngFor="let feature of features; let idx = index; trackBy: trackByIndex"
+        class="bg-teal-900 rounded-2xl p-6 text-white"
+      >
         <h3 class="font-semibold text-lg mb-2">{{ feature.title }}</h3>
 
         <p *ngIf="feature.description" class="text-sm text-teal-100 mb-6">
@@ -95,8 +120,13 @@
               {{ feature.jobcartValue }}
             </div>
 
-            <lucide-icon *ngIf="feature.jobcartMark === 'check'" [img]="icons.CheckCircle" class="text-cyan-400 mx-auto"
-              [size]="24" [strokeWidth]="2.5"></lucide-icon>
+            <lucide-icon
+              *ngIf="feature.jobcartMark === 'check'"
+              [img]="icons.CheckCircle"
+              class="text-cyan-400 mx-auto"
+              [size]="24"
+              [strokeWidth]="2.5"
+            ></lucide-icon>
           </div>
 
           <!-- Traditional -->
@@ -107,8 +137,13 @@
               {{ feature.traditionalValue }}
             </div>
 
-            <lucide-icon *ngIf="feature.traditionalMark === 'x'" [img]="icons.XCircle" class="text-red-400 mx-auto"
-              [size]="24" [strokeWidth]="2.5"></lucide-icon>
+            <lucide-icon
+              *ngIf="feature.traditionalMark === 'x'"
+              [img]="icons.XCircle"
+              class="text-red-400 mx-auto"
+              [size]="24"
+              [strokeWidth]="2.5"
+            ></lucide-icon>
           </div>
         </div>
       </div>

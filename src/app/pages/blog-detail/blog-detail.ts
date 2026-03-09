@@ -16,10 +16,10 @@ export class BlogDetail implements OnInit {
   loading: boolean = true;
 
   constructor(
-    private route: ActivatedRoute, 
+    private route: ActivatedRoute,
     private http: HttpClient,
-    private cdr: ChangeDetectorRef
-  ) { }
+    private cdr: ChangeDetectorRef,
+  ) {}
 
   ngOnInit() {
     this.slug = this.route.snapshot.paramMap.get('slug');
@@ -39,7 +39,9 @@ export class BlogDetail implements OnInit {
           console.log('Original slug from route:', this.slug);
           console.log('Decoded slug:', decodedSlug);
 
-          this.blogData = res.data.find((b: any) => b.blogUrl === decodedSlug || b.blogUrl === this.slug);
+          this.blogData = res.data.find(
+            (b: any) => b.blogUrl === decodedSlug || b.blogUrl === this.slug,
+          );
 
           if (!this.blogData) {
             console.warn('Could not find blog matching slug:', decodedSlug);
@@ -54,7 +56,7 @@ export class BlogDetail implements OnInit {
         console.error('Error fetching blog details', err);
         this.loading = false;
         this.cdr.detectChanges(); // Force update view
-      }
+      },
     });
   }
 }

@@ -13,7 +13,7 @@ interface IndustryCard {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './industries.html',
-   styleUrl: './industries.css',
+  styleUrl: './industries.css',
 })
 export class Industries {
   industries: IndustryCard[] = [
@@ -39,7 +39,7 @@ export class Industries {
       id: 'dining',
       title: 'Dining Facilities',
       subtitle: 'Find workers',
-     image: '/assets/images/Link4.png',
+      image: '/assets/images/Link4.png',
     },
     {
       id: 'stadiums',

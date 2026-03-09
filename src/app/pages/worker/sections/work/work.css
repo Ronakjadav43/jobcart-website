@@ -1,16 +1,16 @@
-    .h3-48 {
-        font-size: 48px;
-        line-height: 53px;
-    }
-    @media screen and (max-width: 767px) {
-        .h3-48 {
-            font-size: 35px;
-            line-height: 40px;
-        }
-    }
-    @media screen and (max-width: 479px) {
-        .h3-48 {
-            font-size: 30px;
-            line-height: 35px;
-        }
-    }
+.h3-48 {
+  font-size: 48px;
+  line-height: 53px;
+}
+@media screen and (max-width: 767px) {
+  .h3-48 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .h3-48 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}

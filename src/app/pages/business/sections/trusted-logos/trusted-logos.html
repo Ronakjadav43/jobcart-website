@@ -3,26 +3,27 @@
     <!-- Header -->
     <div class="mb-12 sm:mb-16">
       <!-- <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight mb-4"> -->
-      <h2 class="font-['Hanken_Grotesk'] font-semibold h2-45 tracking-[-0.9px] text-[#0F172A] text-center">
+      <h2
+        class="font-['Hanken_Grotesk'] font-semibold h2-45 tracking-[-0.9px] text-[#0F172A] text-center"
+      >
         Trusted by thousands of 
-        <span class="font-serif font-normal italic h2-45 tracking-[-0.9px] text-[#06707D]">small and large businesses</span>
+        <span class="font-serif font-normal italic h2-45 tracking-[-0.9px] text-[#06707D]"
+          >small and large businesses</span
+        >
       </h2>
     </div>
 
     <!-- Grid of Industry Cards -->
     <div class="flex items-center justify-center flex-wrap gap-[60px]">
-      <div *ngFor="let logo of trustedlogos"
-        class="group  relative group cursor-pointer">
+      <div *ngFor="let logo of trustedlogos" class="group relative group cursor-pointer">
         <!-- class="relative h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden group cursor-pointer" -->
         <!-- Background Image -->
-        <img [src]="logo.image" [alt]="logo.id"
-          class=" object-cover transition-transform duration-300 group-hover:scale-105" />
-
-
-      
+        <img
+          [src]="logo.image"
+          [alt]="logo.id"
+          class="object-cover transition-transform duration-300 group-hover:scale-105"
+        />
       </div>
     </div>
   </div>
 </section>
-
-

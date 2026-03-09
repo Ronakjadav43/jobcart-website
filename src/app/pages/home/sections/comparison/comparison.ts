@@ -1,14 +1,3 @@
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-comparison',
-//   imports: [],
-//   templateUrl: './comparison.html',
-//   styleUrl: './comparison.css',
-// })
-// export class Comparison {
-
-// }
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule, CheckCircle, XCircle } from 'lucide-angular';
@@ -90,8 +79,7 @@ export class Comparison {
     },
     {
       title: 'Precision time tracking',
-      description:
-        'Geofencing and AI monitoring for accurate billing and on-time worker arrivals',
+      description: 'Geofencing and AI monitoring for accurate billing and on-time worker arrivals',
       jobcartValue: '',
       jobcartMark: 'check',
       traditionalValue: '',

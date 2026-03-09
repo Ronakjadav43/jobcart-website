@@ -1,6 +1,6 @@
 @media (max-width: 480px) {
-.mobile-view {
+  .mobile-view {
     text-align: center;
     justify-content: center;
-}
+  }
 }

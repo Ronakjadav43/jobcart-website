@@ -1,111 +1,123 @@
 <section class="from-slate-50 to-white py-6 sm:py-8 lg:py-12 px-2 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-
-        <!-- Header -->
-        <div class="mb-12 flex flex-col gap-[20px]">
-            <h2 class="font-['Hanken_Grotesk'] font-semibold h2-45 tracking-[-0.9px] text-[#0F172A]">
-                Real stories. <span class="font-serif font-normal italic h2-45 tracking-[-0.9px] text-[#06707D]">Real
-                    reviews.</span>
-            </h2>
-
-        </div>
-
-        <!-- Cards Grid -->
-        <div class="hidden h-[670px] overflow-hidden  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-            <div *ngFor="let review of reviews"
-                class=" flex flex-col border border-[#E6F0F2] rounded-2xl px-6 py-6 text-white shadow-xl transition-transform duration-300 hover:-translate-y-1  shadow-[0px_5px_20px_0px_rgba(0,0,0,0.25)] gap-4">
-
-                <div class="flex items-center gap-2">
-                    <ng-container *ngFor="let _ of [1,2,3,4,5]">
-                        <img src="assets/images/star.svg" [alt]="review.title" />
-                    </ng-container>
-                </div>
-
-                <div class="flex flex-col gap-1">
-                    <!-- Title -->
-                    <h3 class="font-['Hanken_Grotesk'] font-semibold text-base  tracking-[-0.24px] text-[#0F172A]">
-                        {{ review.title }}
-                    </h3>
-
-                    <!-- Description -->
-                    <p class="font-['Hanken_Grotesk'] font-medium text-md  tracking-[-0.18px] text-[#475569]">
-                        {{ review.description }}
-                    </p>
-
-                </div>
-
-                <div class="flex gap-4">
-                    <img [src]="review.image" [alt]="review.title" class="w-9 h-9" />
-                    <div>
-                        <h3 class="font-['Hanken_Grotesk'] font-semibold text-md  tracking-[-0.24px] text-[#0F172A]">{{
-                            review.name }}</h3>
-                        <p class="font-['Hanken_Grotesk'] font-medium text-[13px]  tracking-[-0.18px] text-[#475569]">{{
-                            review.designation }}</p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="relative">
-            <div class="relative overflow-hidden 
-         columns-1 md:columns-2 lg:columns-3 
-         gap-4 space-y-4 transition-all duration-500" [ngClass]="isExpanded ? 'h-full' : 'h-[670px]'">
-                <div *ngFor="let review of reviews" class="break-inside-avoid mb-4 flex flex-col 
-              border border-[#E6F0F2] 
-              rounded-2xl px-6 py-6 
-              shadow-[0px_5px_20px_0px_rgba(0,0,0,0.12)] 
-              transition-transform duration-300 
-              hover:-translate-y-1 gap-4 bg-white">
-
-                    <!-- Stars -->
-                    <div class="flex items-center gap-2">
-                        <ng-container *ngFor="let _ of [1,2,3,4,5]">
-                            <img src="assets/images/star.svg" class="w-4 h-4" />
-                        </ng-container>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="flex flex-col gap-1">
-                        <h3 class="font-semibold text-base text-[#0F172A]">
-                            {{ review.title }}
-                        </h3>
-
-                        <p
-                            class="font-['Hanken_Grotesk'] font-medium text-md tracking-[-0.18px] text-[#475569] line-clamp-3">
-                            {{ review.description }}
-                        </p>
-                    </div>
-
-                    <!-- User -->
-                    <div class="flex gap-4 items-center">
-                        <img [src]="review.image" class="w-9 h-9 rounded-full object-cover" />
-                        <div>
-                            <h3 class="font-semibold text-md text-[#0F172A]">
-                                {{ review.name }}
-                            </h3>
-                            <p class="text-[13px] text-[#475569]">
-                                {{ review.designation }}
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="absolute bottom-0 right-0 left-0 w-full pt-22 pb-10 flex justify-center"
-                [ngClass]="isExpanded ? 'bg-transparent relative !pt-12 !pb-12' : 'bg-[linear-gradient(180deg,rgba(249,251,250,0)_0%,#F9FBFA_42.12%)]'">
-                <button (click)="toggleHeight()" class="w-[220px] md:w-[264px] h-[50px] md:h-[57px] 
-           bg-[#06707D] text-white rounded-[8px] 
-           font-bold text-[18px] flex items-center justify-center gap-3">
-
-                    {{ isExpanded ? 'Show less' : 'Load more' }}
-
-                    <span class="text-xl transition-transform duration-300" [ngClass]="isExpanded ? 'rotate-180' : ''">
-                        ⟶
-                    </span>
-
-                </button>
-            </div>
-        </div>
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="mb-12 flex flex-col gap-[20px]">
+      <h2 class="font-['Hanken_Grotesk'] font-semibold h2-45 tracking-[-0.9px] text-[#0F172A]">
+        Real stories.
+        <span class="font-serif font-normal italic h2-45 tracking-[-0.9px] text-[#06707D]"
+          >Real reviews.</span
+        >
+      </h2>
     </div>
+
+    <!-- Cards Grid -->
+    <div class="hidden h-[670px] overflow-hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div
+        *ngFor="let review of reviews"
+        class="flex flex-col border border-[#E6F0F2] rounded-2xl px-6 py-6 text-white shadow-xl transition-transform duration-300 hover:-translate-y-1 shadow-[0px_5px_20px_0px_rgba(0,0,0,0.25)] gap-4"
+      >
+        <div class="flex items-center gap-2">
+          <ng-container *ngFor="let _ of [1, 2, 3, 4, 5]">
+            <img src="assets/images/star.svg" [alt]="review.title" />
+          </ng-container>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <!-- Title -->
+          <h3
+            class="font-['Hanken_Grotesk'] font-semibold text-base tracking-[-0.24px] text-[#0F172A]"
+          >
+            {{ review.title }}
+          </h3>
+
+          <!-- Description -->
+          <p class="font-['Hanken_Grotesk'] font-medium text-md tracking-[-0.18px] text-[#475569]">
+            {{ review.description }}
+          </p>
+        </div>
+
+        <div class="flex gap-4">
+          <img [src]="review.image" [alt]="review.title" class="w-9 h-9" />
+          <div>
+            <h3
+              class="font-['Hanken_Grotesk'] font-semibold text-md tracking-[-0.24px] text-[#0F172A]"
+            >
+              {{ review.name }}
+            </h3>
+            <p
+              class="font-['Hanken_Grotesk'] font-medium text-[13px] tracking-[-0.18px] text-[#475569]"
+            >
+              {{ review.designation }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div
+        class="relative overflow-hidden columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 transition-all duration-500"
+        [ngClass]="isExpanded ? 'h-full' : 'h-[670px]'"
+      >
+        <div
+          *ngFor="let review of reviews"
+          class="break-inside-avoid mb-4 flex flex-col border border-[#E6F0F2] rounded-2xl px-6 py-6 shadow-[0px_5px_20px_0px_rgba(0,0,0,0.12)] transition-transform duration-300 hover:-translate-y-1 gap-4 bg-white"
+        >
+          <!-- Stars -->
+          <div class="flex items-center gap-2">
+            <ng-container *ngFor="let _ of [1, 2, 3, 4, 5]">
+              <img src="assets/images/star.svg" class="w-4 h-4" />
+            </ng-container>
+          </div>
+
+          <!-- Content -->
+          <div class="flex flex-col gap-1">
+            <h3 class="font-semibold text-base text-[#0F172A]">
+              {{ review.title }}
+            </h3>
+
+            <p
+              class="font-['Hanken_Grotesk'] font-medium text-md tracking-[-0.18px] text-[#475569] line-clamp-3"
+            >
+              {{ review.description }}
+            </p>
+          </div>
+
+          <!-- User -->
+          <div class="flex gap-4 items-center">
+            <img [src]="review.image" class="w-9 h-9 rounded-full object-cover" />
+            <div>
+              <h3 class="font-semibold text-md text-[#0F172A]">
+                {{ review.name }}
+              </h3>
+              <p class="text-[13px] text-[#475569]">
+                {{ review.designation }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-0 right-0 left-0 w-full pt-22 pb-10 flex justify-center"
+        [ngClass]="
+          isExpanded
+            ? 'bg-transparent relative !pt-12 !pb-12'
+            : 'bg-[linear-gradient(180deg,rgba(249,251,250,0)_0%,#F9FBFA_42.12%)]'
+        "
+      >
+        <button
+          (click)="toggleHeight()"
+          class="w-[220px] md:w-[264px] h-[50px] md:h-[57px] bg-[#06707D] text-white rounded-[8px] font-bold text-[18px] flex items-center justify-center gap-3"
+        >
+          {{ isExpanded ? 'Show less' : 'Load more' }}
+
+          <span
+            class="text-xl transition-transform duration-300"
+            [ngClass]="isExpanded ? 'rotate-180' : ''"
+          >
+            ⟶
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>

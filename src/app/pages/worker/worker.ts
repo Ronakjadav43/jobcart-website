@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {  fullControl } from "./sections/fullControl/full-control";
-import {  Work } from "./sections/work/work";
-import { Steps } from "./sections/steps/steps";
+import { fullControl } from './sections/fullControl/full-control';
+import { Work } from './sections/work/work';
+import { Steps } from './sections/steps/steps';
 
 @Component({
   selector: 'app-worker',
@@ -9,6 +9,4 @@ import { Steps } from "./sections/steps/steps";
   templateUrl: './worker.html',
   styleUrl: './worker.css',
 })
-export class worker {
-
-}
+export class worker {}

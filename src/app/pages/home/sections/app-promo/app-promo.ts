@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './app-promo.html',
   styleUrl: './app-promo.css',
 })
-export class AppPromo {
-
-}
+export class AppPromo {}
