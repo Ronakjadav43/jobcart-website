@@ -20,7 +20,7 @@ import {
   ɵɵdirectiveInject,
   ɵɵprojection,
   ɵɵprojectionDef
-} from "./chunk-F7LKDYH6.js";
+} from "./chunk-MM6NZWVC.js";
 
 // node_modules/lucide-angular/fesm2020/lucide-angular.mjs
 var _c0 = ["*"];

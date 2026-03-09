@@ -1,0 +1,8 @@
+{
+  "/blog-api/*": {
+    "target": "https://api.jobcart.ca",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
